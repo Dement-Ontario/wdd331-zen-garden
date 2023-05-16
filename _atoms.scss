@@ -10,26 +10,69 @@
     padding: $padding;
 }
 
+html {
+    background-color: v.$background-color;
+    padding: 1.5%;
+}
+
+body {
+    font-family: v.$para-font;
+    color: v.$font-color;
+    background-color: darken(v.$element-color, 5%);
+    @include white-space(0);
+}
+
+footer, aside {
+    background-color: white;
+    padding: 1rem;
+}
+
+footer {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section {
+    background-color: white;
+    @include white-space(0 0 1rem 0);
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: v.$heading-font;
+    margin: 0;
+}
+
+h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 4.5rem;
 }
 
 h2 {
-    font-size: 4em;
+    font-size: 3.5rem;
 }
 
 h3 {
-    font-size: 3em;
+    font-size: 2.5rem;
 }
 
 h4 {
-    font-size: 2em;
+    font-size: 1.5rem;
 }
 
 p, a, li, label {
     font-family: v.$para-font;
+    font-size: 1.15rem;
+    margin: 1rem 0;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
 }
