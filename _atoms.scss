@@ -76,3 +76,24 @@ a {
         text-decoration: underline;
     }
 }
+
+@media (min-width: 900px) {
+
+    header {
+        grid-column: 2 / 3;
+    }
+
+    aside {
+        grid-column: 3;
+    }
+
+    footer {
+        grid-column: 1 / span 2;
+        grid-row: 5;
+    }
+
+    section, footer {
+        margin: 0;
+    }
+
+}

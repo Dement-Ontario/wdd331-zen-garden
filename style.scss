@@ -3,11 +3,6 @@
 @use 'organisms' as o;
 @use 'variables' as v;
 
-// .page-wrapper{
-//     display: grid;
-    
-//   }
-
 .intro{
     display: grid;
     gap: 0.5rem;
@@ -20,21 +15,6 @@
     .preamble {
         grid-column: span 2;
     }
-}
-
-// #zen-supporting{
-//     display: grid;
-//     grid-template-columns: 1fr;
-//     grid-column: span 3;
-// }
-.explanation{
-    grid-column: 1 / span 4;
-    grid-row: 3;
-
-}
-.participation{
-    grid-column: 1 / span 4;
-    grid-row: 4;
 }
 
 .summary, .preamble {
@@ -73,12 +53,52 @@ aside ul {
   grid-row: 1/span 2;
 }
 
-// .design-archives{
-//   grid-column: 2;
-//   grid-row: 2;
-// }
+@media (min-width: 900px) {
 
-// .zen-resources {
-//   grid-column: 2;
-//   grid-row: 3;
-// }
+    .page-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        gap: 1rem 0.5rem;
+    }
+
+    .intro {
+        grid-template-columns: 1fr 1.5fr 1fr;
+        grid-column: span 3;
+
+        .preamble {
+            grid-column: span 3;
+        }
+    }
+
+    aside div.wrapper {
+        display: block;
+    }
+
+    .main {
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        gap: 0.5rem;
+
+        .participation {
+            grid-row: 2;
+            grid-column: span 2;
+        }
+
+        .benefits {
+            grid-row: 3;
+            grid-column: 2;
+        }
+
+        .requirements {
+            grid-column: span 2;
+            grid-row: 4;
+        }
+    }
+
+    .main div {
+        margin: 0;
+    }
+
+}
