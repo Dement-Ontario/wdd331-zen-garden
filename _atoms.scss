@@ -11,7 +11,7 @@
 }
 
 html {
-    background-color: v.$background-color;
+    background: linear-gradient(darken(v.$background-color, 20%), v.$background-color);
     padding: 1.5%;
 }
 

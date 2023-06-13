@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Itim&display=swap");
 html {
-  background-color: #B5e2fa;
+  background: linear-gradient(#55bdf4, #B5e2fa);
   padding: 1.5%;
 }
 
