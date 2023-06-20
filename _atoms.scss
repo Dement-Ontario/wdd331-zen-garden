@@ -12,14 +12,14 @@
 
 html {
     background: linear-gradient(darken(v.$background-color, 20%), v.$background-color);
-    padding: 1.5%;
+    padding: 2.5%;
 }
 
 body {
     font-family: v.$para-font;
     color: v.$font-color;
     background-color: darken(v.$element-color, 5%);
-    @include white-space(0);
+    @include white-space(0, 0.75rem);
 }
 
 footer, aside {

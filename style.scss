@@ -101,4 +101,31 @@ aside ul {
         margin: 0;
     }
 
+    .intro::before {
+        grid-row: 1;
+        grid-column: 1;
+        content: "";
+        display:block;
+        align-self: center;
+        justify-self: center;
+        width:220px;
+        height:110px;
+        background: radial-gradient(circle, rgba(255,253,105,1) 40%, rgba(255,255,255,1) 42%, rgba(255,105,180,1) 80%);
+        border-radius: 50px;
+        transform: rotate(45deg)
+    }
+
+    .intro::after {
+        grid-row: 1;
+        grid-column: 1;
+        content:"";
+        display: block;
+        align-self: center;
+        justify-self: center;
+        width:220px;
+        height:110px;
+        background: radial-gradient(circle, rgba(255,253,105,1) 40%, rgba(255,255,255,1) 42%, rgba(255,105,180,1) 80%);
+        border-radius: 50px;
+        transform: rotate(-45deg)
+    }
 }

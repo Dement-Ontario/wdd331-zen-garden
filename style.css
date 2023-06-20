@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Itim&display=swap");
 html {
   background: linear-gradient(#55bdf4, #B5e2fa);
-  padding: 1.5%;
+  padding: 2.5%;
 }
 
 body {
@@ -9,7 +9,7 @@ body {
   color: #4b3f3a;
   background-color: #ffdc50;
   margin: 0;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 footer, aside {
@@ -168,6 +168,32 @@ aside ul {
   }
   .main div {
     margin: 0;
+  }
+  .intro::before {
+    grid-row: 1;
+    grid-column: 1;
+    content: "";
+    display: block;
+    align-self: center;
+    justify-self: center;
+    width: 220px;
+    height: 110px;
+    background: radial-gradient(circle, rgb(255, 253, 105) 40%, rgb(255, 255, 255) 42%, rgb(255, 105, 180) 80%);
+    border-radius: 50px;
+    transform: rotate(45deg);
+  }
+  .intro::after {
+    grid-row: 1;
+    grid-column: 1;
+    content: "";
+    display: block;
+    align-self: center;
+    justify-self: center;
+    width: 220px;
+    height: 110px;
+    background: radial-gradient(circle, rgb(255, 253, 105) 40%, rgb(255, 255, 255) 42%, rgb(255, 105, 180) 80%);
+    border-radius: 50px;
+    transform: rotate(-45deg);
   }
 }
 
