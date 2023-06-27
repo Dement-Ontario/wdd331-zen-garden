@@ -7,7 +7,10 @@ html {
 body {
   font-family: "Itim", "Arial", sans-serif;
   color: #4b3f3a;
-  background-color: #ffdc50;
+  /* Honeycomb gradient from https://projects.verou.me/css3patterns/#honeycomb and created by Paul Salentiny */
+  background: radial-gradient(circle farthest-side at 0% 50%, #ffdc50 23.5%, rgba(240, 166, 17, 0) 0) 21px 30px, radial-gradient(circle farthest-side at 0% 50%, #e9ba00 24%, rgba(240, 166, 17, 0) 0) 19px 30px, linear-gradient(#ffdc50 14%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 85%, #ffdc50 0) 0 0, linear-gradient(150deg, #ffdc50 24%, #e9ba00 0, #e9ba00 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #e9ba00 0, #e9ba00 76%, #ffdc50 0) 0 0, linear-gradient(30deg, #ffdc50 24%, #e9ba00 0, #e9ba00 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #e9ba00 0, #e9ba00 76%, #ffdc50 0) 0 0, linear-gradient(90deg, #e9ba00 2%, #ffdc50 0, #ffdc50 98%, #e9ba00 0%) 0 0 #ffdc50;
+  background-size: 40px 60px;
+  border-radius: 10px;
   margin: 0;
   padding: 0.75rem;
 }
@@ -22,6 +25,7 @@ footer {
   text-align: center;
   display: flex;
   justify-content: space-evenly;
+  gap: 0.5rem;
 }
 
 section {
@@ -62,6 +66,7 @@ p, a, li, label {
 }
 
 a {
+  color: rgb(0, 110, 0);
   text-decoration: none;
 }
 a:hover {
@@ -74,6 +79,7 @@ a:hover {
   }
   aside {
     grid-column: 3;
+    position: relative;
   }
   footer {
     grid-column: 1/span 2;
@@ -147,6 +153,44 @@ aside ul {
   aside div.wrapper {
     display: block;
   }
+  aside::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-right: 70px solid #ffb6c3;
+    border-top: 120px solid transparent;
+    border-left: 70px solid #ffbbc7;
+    border-bottom: 100px solid pink;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    position: absolute;
+    z-index: 1;
+    bottom: 300px;
+    left: calc(50% - 70px);
+  }
+  aside::after { /*stem*/
+    content: "";
+    position: absolute;
+    bottom: 1rem;
+    left: calc(50% - 15px);
+    width: 0;
+    height: 300px;
+    border: 15px solid green;
+    border-radius: 0 0 30px 30px;
+  }
+  aside .wrapper::after { /*leaf*/
+    content: "";
+    position: absolute;
+    background-color: #006700;
+    bottom: 150px;
+    left: 50%;
+    height: 50px;
+    width: 70px;
+    border-radius: 250px 0;
+    text-align: center;
+  }
   .main {
     grid-column: span 2;
     display: grid;
@@ -176,8 +220,8 @@ aside ul {
     display: block;
     align-self: center;
     justify-self: center;
-    width: 220px;
-    height: 110px;
+    width: 200px;
+    height: 100px;
     background: radial-gradient(circle, rgb(255, 253, 105) 40%, rgb(255, 255, 255) 42%, rgb(255, 105, 180) 80%);
     border-radius: 50px;
     transform: rotate(45deg);
@@ -189,11 +233,23 @@ aside ul {
     display: block;
     align-self: center;
     justify-self: center;
-    width: 220px;
-    height: 110px;
+    width: 200px;
+    height: 100px;
     background: radial-gradient(circle, rgb(255, 253, 105) 40%, rgb(255, 255, 255) 42%, rgb(255, 105, 180) 80%);
     border-radius: 50px;
     transform: rotate(-45deg);
+  }
+  footer a {
+    display: block;
+    color: black;
+    background-color: #dbb42c;
+    width: 100%;
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
+  footer a:hover {
+    text-decoration: none;
+    background-color: #ffd736;
   }
 }
 

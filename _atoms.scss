@@ -18,7 +18,16 @@ html {
 body {
     font-family: v.$para-font;
     color: v.$font-color;
-    background-color: darken(v.$element-color, 5%);
+    /* Honeycomb gradient from https://projects.verou.me/css3patterns/#honeycomb and created by Paul Salentiny */
+    background:
+        radial-gradient(circle farthest-side at 0% 50%,darken(v.$element-color, 5%) 23.5%,rgba(240,166,17,0) 0)21px 30px,
+        radial-gradient(circle farthest-side at 0% 50%,darken(v.$element-color, 25%) 24%,rgba(240,166,17,0) 0)19px 30px,
+        linear-gradient(darken(v.$element-color, 5%) 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,darken(v.$element-color, 5%) 0)0 0,
+        linear-gradient(150deg,darken(v.$element-color, 5%) 24%,darken(v.$element-color, 25%) 0,darken(v.$element-color, 25%) 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,darken(v.$element-color, 25%) 0,darken(v.$element-color, 25%) 76%,darken(v.$element-color, 5%) 0)0 0,
+        linear-gradient(30deg,darken(v.$element-color, 5%) 24%,darken(v.$element-color, 25%) 0,darken(v.$element-color, 25%) 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,darken(v.$element-color, 25%) 0,darken(v.$element-color, 25%) 76%,darken(v.$element-color, 5%) 0)0 0,
+        linear-gradient(90deg,darken(v.$element-color, 25%) 2%,darken(v.$element-color, 5%) 0,darken(v.$element-color, 5%) 98%,darken(v.$element-color, 25%) 0%)0 0 darken(v.$element-color, 5%);
+    background-size: 40px 60px;
+    border-radius: 10px;
     @include white-space(0, 0.75rem);
 }
 
@@ -32,6 +41,7 @@ footer {
     text-align: center;
     display: flex;
     justify-content: space-evenly;
+    gap: 0.5rem;
 }
 
 section {
@@ -71,6 +81,7 @@ p, a, li, label {
 }
 
 a {
+    color: rgb(0, 110, 0);
     text-decoration: none;
     &:hover {
         text-decoration: underline;
@@ -85,6 +96,7 @@ a {
 
     aside {
         grid-column: 3;
+        position: relative;
     }
 
     footer {

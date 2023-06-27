@@ -74,6 +74,47 @@ aside ul {
         display: block;
     }
 
+    aside::before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-right: 70px solid darken(pink, 2%);
+        border-top: 120px solid transparent;
+        border-left: 70px solid darken(pink, 1%);
+        border-bottom: 100px solid pink;
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+        position: absolute;
+        z-index: 1;
+        bottom: 300px;
+        left: calc(50% - 70px)
+    }
+
+    aside::after {  /*stem*/
+        content: "";
+        position: absolute; 
+        bottom: 1rem; 
+        left: calc(50% - 15px);
+        width: 0;
+        height: 300px;
+        border: 15px solid green;
+        border-radius: 0 0 30px 30px; 
+    }
+
+    aside .wrapper::after {  /*leaf*/
+        content: "";
+        position: absolute;
+        background-color: darken(green, 5%);
+        bottom: 150px;
+        left: 50%;
+        height: 50px;
+        width: 70px;
+        border-radius: 250px 0;
+        text-align: center;
+    }
+
     .main {
         grid-column: span 2;
         display: grid;
@@ -108,11 +149,11 @@ aside ul {
         display:block;
         align-self: center;
         justify-self: center;
-        width:220px;
-        height:110px;
+        width:200px;
+        height:100px;
         background: radial-gradient(circle, rgba(255,253,105,1) 40%, rgba(255,255,255,1) 42%, rgba(255,105,180,1) 80%);
         border-radius: 50px;
-        transform: rotate(45deg)
+        transform: rotate(45deg);
     }
 
     .intro::after {
@@ -122,10 +163,24 @@ aside ul {
         display: block;
         align-self: center;
         justify-self: center;
-        width:220px;
-        height:110px;
+        width:200px;
+        height:100px;
         background: radial-gradient(circle, rgba(255,253,105,1) 40%, rgba(255,255,255,1) 42%, rgba(255,105,180,1) 80%);
         border-radius: 50px;
-        transform: rotate(-45deg)
+        transform: rotate(-45deg);
+    }
+
+    footer a {
+        display: block;
+        color: black;
+        background-color: v.$accent-color;
+        width: 100%;
+        margin: 0;
+        padding: 0.5rem 1rem;
+
+        &:hover {
+            text-decoration: none;
+            background-color: darken(v.$element-color, 10%);
+        }
     }
 }
