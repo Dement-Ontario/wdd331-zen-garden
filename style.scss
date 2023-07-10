@@ -53,6 +53,57 @@ aside ul {
   grid-row: 1/span 2;
 }
 
+@keyframes jazzfly {
+    0% {
+        transform: scaleX(1);
+        background-position: 100% 59%;
+    }
+
+    10% {
+        background-position: 87% 16%;
+    }
+
+    25% {
+        background-position: 45% 32%;
+    }
+
+    40% {
+        background-position: 15% 10%;
+    }
+
+    50% {
+        background-position: 0% 45%;
+        transform: scaleX(1);
+    }
+
+    50.01% {
+        background-position: 100% 45%;
+        transform: scaleX(-1);
+    }
+
+    60% {
+        background-position: 84% 82%;
+    }
+
+    75% {
+        background-position: 60% 64%;
+    }
+
+    90% {
+        background-position: 28% 97%;
+    }
+
+    99.99% {
+        background-position: 0% 59%;
+        transform: scaleX(-1);
+    }
+
+    100% {
+        transform: scaleX(1);
+        background-position: 100% 59%;
+    }
+}
+
 @media (min-width: 900px) {
 
     .page-wrapper {
@@ -140,6 +191,17 @@ aside ul {
 
     .main div {
         margin: 0;
+    }
+
+    .main::before {
+        grid-row: 1;
+        grid-column: 2;
+        content: "";
+        background-image: url("images/yalikejazz.png");
+        background-size: 106px;
+        background-repeat: no-repeat;
+        background-position: 100% 59%;
+        animation: jazzfly 10s infinite ease-in-out;
     }
 
     .intro::before {
