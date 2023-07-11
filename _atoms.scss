@@ -97,6 +97,9 @@ a {
     aside {
         grid-column: 3;
         position: relative;
+        background: linear-gradient(v.$background-color, darken(v.$background-color, 20%));
+        padding: 0.375rem;
+        border: 0.375rem solid white;
     }
 
     footer {

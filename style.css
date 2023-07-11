@@ -80,6 +80,9 @@ a:hover {
   aside {
     grid-column: 3;
     position: relative;
+    background: linear-gradient(#B5e2fa, #55bdf4);
+    padding: 0.375rem;
+    border: 0.375rem solid white;
   }
   footer {
     grid-column: 1/span 2;
@@ -207,16 +210,16 @@ aside ul {
     border-bottom-right-radius: 60px;
     position: absolute;
     z-index: 1;
-    bottom: 300px;
+    bottom: 250px;
     left: calc(50% - 70px);
   }
   aside::after { /*stem*/
     content: "";
     position: absolute;
-    bottom: 1rem;
+    bottom: 0.5rem;
     left: calc(50% - 15px);
     width: 0;
-    height: 300px;
+    height: 250px;
     border: 15px solid green;
     border-radius: 0 0 30px 30px;
   }
@@ -230,6 +233,22 @@ aside ul {
     width: 70px;
     border-radius: 250px 0;
     text-align: center;
+  }
+  aside .wrapper::before {
+    width: 133px;
+    height: 133px;
+    content: "";
+    background-image: url("svg/aviation.svg");
+    background-repeat: no-repeat;
+    padding-bottom: 0%;
+    position: absolute;
+    bottom: 345px;
+    left: calc(50% - 66.5px);
+  }
+  aside h3, aside li {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0.1rem;
   }
   .main {
     grid-column: span 2;
@@ -257,7 +276,16 @@ aside ul {
     grid-row: 1;
     grid-column: 2;
     content: "";
-    background-image: url("images/yalikejazz.png");
+    background-image: url("svg/hive.svg");
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  .main::after {
+    grid-row: 3;
+    grid-column: 1;
+    content: "";
+    background-image: url("svg/yalikejazz.svg");
     background-size: 106px;
     background-repeat: no-repeat;
     background-position: 100% 59%;
